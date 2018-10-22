@@ -1,0 +1,42 @@
+<apex:page controller="Acc_Con_TabPanel_Example" >
+    <apex:form id="fm">
+    <apex:tabPanel width="800" height="300" value="{!selected}">
+        <br/><br/>
+        <apex:tab label="Account" id="one" >
+            <br/><br/>
+            <apex:pageBlock mode="mainDetail">
+                <apex:pageBlockButtons location="bottom" dir="RTL">
+                <apex:commandButton value="Next" action="{!next}" id="fm" />
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!acc.name}"/>
+                <apex:inputText value="{!acc.phone}"/>
+                <apex:inputText value="{!acc.industry}"/>
+                <apex:inputText value="{!acc.ownership}"/>
+                <apex:inputText value="{!acc.rating}"/>
+                <apex:inputText value="{!acc.type}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        
+        </apex:tab>
+        
+        <apex:tab label="Contact" id="two" >
+            <br/><br/>
+            <apex:pageBlock mode="mainDetail">
+                <apex:pageBlockButtons location="bottom" dir="RTL">
+                <apex:commandButton value="Submit" action="{!submit}" id="fm" />
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!con.lastname}"/>
+                <apex:inputText value="{!con.firstName}"/>
+                <apex:inputText value="{!con.phone}"/>
+                <apex:inputText value="{!con.email}"/>
+                <apex:inputText value="{!con.leadsource}"/>
+                
+            </apex:pageBlockSection>
+            </apex:pageBlock>
+        
+        </apex:tab>
+        </apex:tabPanel>
+    </apex:form>
+</apex:page>
